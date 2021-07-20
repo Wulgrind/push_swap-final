@@ -10,6 +10,7 @@ int	main(int ac, char **av)
 	{
 		i++;
 	}
+	param.stop = i;
 	param.a = malloc(sizeof(int *) * i);
 	if (!ft_errors(av, &param, ac))
 	{

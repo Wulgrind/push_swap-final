@@ -6,6 +6,7 @@
 typedef struct	s_param
 {
 	int* a;
+	int	stop;
 }				t_param;
 
 int	main(int ac, char **av);
