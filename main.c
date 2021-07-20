@@ -3,13 +3,17 @@
 int	main(int ac, char **av)
 {
 	int	i;
-	int	*a;
+	t_param param;
 
 	i = 0;
-	while (av[i])
+	while (i < ac)
 	{
 		i++;
 	}
-	a = malloc(sizeof(int) * i);
-	
+	param.a = malloc(sizeof(int *) * i);
+	if (!ft_errors(av, &param, ac))
+	{
+		ft_putstr("Error\n");
+		exit(1);
+	}
 }
