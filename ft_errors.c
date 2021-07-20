@@ -7,15 +7,16 @@ int	ft_errors3(t_param *param, int ac)
 
 	i = 0;
 	j = 0;
-	while (param->a[i] != param->stop)
+	while (param->a[i] != param->stop -1)
 	{
 		j = 0;
-		while (param->a[j] != param->stop)
+		while (param->a[j] != param->stop -1)
 		{
 			if (param->a[i] == param->a[j] && i != j)
 				return (0);
 			j++;
 		}
+		ft_putnbr(param->a[i]);
 		i++;
 	}
 	return (1);
@@ -35,10 +36,10 @@ int	ft_errors2(char **av, t_param *param)
 		if (check > 2147483647 || check < -2147483648)
 			return (0);
 		param->a[i2] = check;
+		param->stop++;
 		i++;
 		i2++;
 	}
-	param->a[i2] = 0;
 	return (1);
 }
 
