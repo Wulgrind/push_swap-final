@@ -7,16 +7,15 @@ int	ft_errors3(t_param *param, int ac)
 
 	i = 0;
 	j = 0;
-	while (param->a[i] != param->stop -1)
+	while (i != param->stop)
 	{
 		j = 0;
-		while (param->a[j] != param->stop -1)
+		while (j < i)
 		{
 			if (param->a[i] == param->a[j] && i != j)
 				return (0);
 			j++;
 		}
-		ft_putnbr(param->a[i]);
 		i++;
 	}
 	return (1);
@@ -60,7 +59,7 @@ int	ft_errors(char **av, t_param *param, int ac)
 		}
 		i++;
 	}
-	if (!ft_errors2(av, param) || ft_errors3(param, ac))
+	if (!ft_errors2(av, param) || !ft_errors3(param, ac))
 		return (0);
 	return (1);
 }
