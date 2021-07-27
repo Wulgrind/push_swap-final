@@ -9,7 +9,9 @@ typedef struct	s_param
 	int*	b;
 	int	stopa;
 	int	stopb;
-}				t_param;
+	int	small;
+	int	smallpos;
+}		t_param;
 
 int	main(int ac, char **av);
 int	ft_errors(char **av, t_param *param, int ac);
@@ -28,5 +30,6 @@ int	ft_pick(int ac, t_param *param);
 void	ft_small(int ac, t_param *param);
 void	ft_sort4(t_param *param);
 void	ft_sort3(t_param *param);
+void	ft_sort5(t_param *param);
 
 #endif

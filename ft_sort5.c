@@ -1,59 +1,93 @@
 #include "ft_pushswap.h"
 
-void	ft_sort5c(t_param *param)
+void	ft_sort5d(t_param *param)
 {
-	
-}
-
-void	ft_sort5bb(t_param *param)
-{
-	if (param->b[0] > param->a[0])
+	if (param->smallpos == 3)
+		ft_pb(param);
+	if (param->smallpos == 2)
+	{
+		ft_sa(param, 0);
+		ft_pb(param);
+	}
+	if (param->smallpos == 1)
 	{
 		ft_rra(param, 0);
-		ft_pa(param);
-		ft_ra(param, 0);
-		ft_ra(param, 0);
-		ft_pa(param);
-		ft_ra(param, 0);
+		ft_rra(param, 0);
+		ft_pb(param);
 	}
+	if (param->smallpos == 0)
+	{
+		ft_rra(param, 0);
+		ft_pb(param);
+	}
+	ft_sort3(param);
+	ft_pa(param);
+	ft_pa(param);
+}
+
+void	ft_sort5c(t_param *param)
+{
+	int	i;
+
+	i = 0;
+	if (param->smallpos == 1)
+	{
+		ft_rra(param, 0);
+		ft_rra(param, 0);
+		ft_pb(param);
+	}
+	param->smallpos = 0;
+	param->small = param->a[i];
+	while (i < param->stopa)
+	{
+		if (param->a[i] < param->small)
+		{
+			param->small = param->a[i];
+			param->smallpos = i;
+		}
+		i++;
+	}
+	ft_sort5d(param);
 }
 
 void	ft_sort5b(t_param *param)
 {
-	if (param->b[1] < param->a[1])
+	if (param->smallpos == 0)
 	{
-		ft_pa(param);
+		ft_rra(param, 0);
+		ft_pb(param);
+	}
+	if (param->smallpos == 3)
+	{
 		ft_sa(param, 0);
+		ft_pb(param);
 	}
-	if (param->b[1] > param->a[1] && param->b[1] < param->a[0])
+	if (param->smallpos == 2)
 	{
-		if (param->b[0] < param->a[0])
-		{
-			ft_rra(param, 0);
-			ft_pa(param);
-			ft_pa(param);
-			ft_sa(param, 0);
-			ft_ra(param, 0);
-			ft_ra(param, 0);
-			ft_ra(param, 0);
-		}
-		ft_sort5bb(param);
+		ft_ra(param, 0);
+		ft_sa(param, 0);
+		ft_pb(param);
 	}
-	ft_sort5c(param);
+	ft_sort5c(param);	
 }
 
 void	ft_sort5(t_param *param)
 {
-	ft_pb(param);
-	ft_pb(param);
-	ft_sort3(param);
-	if (param->b[1] > param->b[0])
-		sb(param, 0);
-	else if (param->b[1] < param->a[2])
-		ft_pa(param);
-	else if (param->b[1] > param->a[0])
+	int	i;
+		
+	i = 0;
+	param->small = param->a[i];
+	param->smallpos = i;
+	while (i < param->stopa)
 	{
-		ft_pa(param);
-		ft_ra(param, 0);	
+		if (param->a[i] < param->small)
+		{
+			param->small = param->a[i];
+			param->smallpos = i;
+		}
+		i++;
+	}
+	if (param->smallpos == 4)
+		ft_pb(param);
 	ft_sort5b(param);
 }
