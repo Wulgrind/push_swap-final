@@ -1,6 +1,6 @@
 #include "ft_pushswap.h"
 
-void	ft_rrb(t_param *param)
+void	ft_rrb(t_param *param, int sw)
 {
 	int	temp;
 	int	i;
@@ -13,4 +13,6 @@ void	ft_rrb(t_param *param)
 		i++;
 	}
 	param->b[i] = temp;
+	if (sw == 0)
+		ft_putstr("rrb\n");
 }

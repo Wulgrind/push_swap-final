@@ -2,6 +2,7 @@
 
 void	ft_rrr(t_param *param)
 {
-	ft_rra(param);
-	ft_rrb(param);
+	ft_rra(param, 1);
+	ft_rrb(param, 1);
+	ft_putstr("rrr\n");
 }

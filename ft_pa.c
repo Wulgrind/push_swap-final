@@ -13,4 +13,5 @@ void	ft_pa(t_param *param)
 		param->stopb--;
 		param->stopa++;
 	}
+		ft_putstr("pa\n");
 }

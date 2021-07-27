@@ -1,6 +1,6 @@
 #include "ft_pushswap.h"
 
-void	ft_sa(t_param *param)
+void	ft_sa(t_param *param, int sw)
 {
 	int	i;
 	int	temp;
@@ -12,4 +12,6 @@ void	ft_sa(t_param *param)
 		param->a[i] = param->a[i - 1];
 		param->a[i - 1] = temp;
 	}
+	if (sw == 0)
+		ft_putstr("sa\n");
 }

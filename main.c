@@ -19,22 +19,14 @@ int	main(int ac, char **av)
 		ft_putstr("Error\n");
 		exit(1);
 	}
-	ft_pa(&param);	
-	ft_pb(&param);
-	ft_pa(&param);
-	ft_rra(&param);
-	ft_ra(&param);
-	int j = 0;
-	while (j < param.stopa)
+	ft_pick(ac, &param);
+
+	int	j = 0;
+	while (param.a[j])
 	{
 		ft_putnbr(param.a[j]);
+		ft_putstr("\n");
 		j++;
 	}
-	j = 0;
-	ft_putstr("\n");
-	while (j < param.stopb)
-	{
-		ft_putnbr(param.b[j]);
-		j++;
-	}
+	return (0);
 }
