@@ -45,6 +45,8 @@ void	ft_small(int ac, t_param *param)
 		ft_sort2(param);
 	if (ac == 4)
 		ft_sort3(param);
-	if (ac >= 5)
+	if (ac == 5)
 		ft_sort4(param);
+	if (ac == 6)
+		ft_sort5(param);	
 }
