@@ -16,7 +16,7 @@
 int	ft_atoi(char *str)
 {
 	int			negatif;
-	long int			resultat;
+	long long			resultat;
 	int			i;
 
 	i = 0;
@@ -30,7 +30,7 @@ int	ft_atoi(char *str)
 		if (str[i++] == '-')
 			negatif = -1;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[i] >= 48 && str[i] <= 57)
 	{
 		resultat = resultat * 10 + (str[i] - '0');
 		i++;

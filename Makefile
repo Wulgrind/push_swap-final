@@ -1,7 +1,7 @@
 #Compilation
 
 CC	= gcc
-CFLAGS	= -Wall -Wextra -Werror -g -fsanitize=address
+CFLAGS	= -Wall -Wextra -Werror
 INC = -I.
 LIB = ft_pushswap.h
 

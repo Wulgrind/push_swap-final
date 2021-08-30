@@ -7,6 +7,7 @@ int	ft_errors3(t_param *param)
 
 	i = 0;
 	j = 0;
+
 	while (i != param->stopa)
 	{
 		j = 0;
@@ -25,21 +26,20 @@ void	ft_order(t_param *param)
 {
 	int	i;
 	int	j;
-	char	*temp;
 
-	temp = malloc(sizeof(int *) * param->stopa);
+	param->temp = malloc(sizeof(int *) * param->stopa);
 	i = param->stopa - 1;
 	j = 0;
 	while (i >= 0)
 	{
-		temp[j] = param->a[i];
+		param->temp[j] = param->a[i];
 		i--;
 		j++;
 	}
 	i = 0;
 	while (i < param->stopa)
 	{
-		param->a[i] = temp[i];
+		param->a[i] = param->temp[i];
 		i++;
 	}
 }
@@ -48,13 +48,14 @@ int	ft_errors2(char **av, t_param *param)
 {
 	int			i;
 	int			i2;
-	long int			check;
+	long long		check;
 
 	i = 1;
 	i2 = 0;
 	while (av[i])
 	{
 		check = ft_atoi(av[i]);
+		ft_putnbr(check);
 		if (check > 2147483647 || check < -2147483648)
 			return (0);
 		param->a[i2] = check;

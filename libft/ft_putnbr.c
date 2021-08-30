@@ -13,10 +13,11 @@
 #include <unistd.h>
 #include "libft.h"
 
-void	ft_putnbr(int nb)
+void	ft_putnbr(long long nb)
 {
 	if (nb < 0)
 	{
+		ft_putstr("-");
 		nb = -nb;
 	}
 	if (nb >= 10)

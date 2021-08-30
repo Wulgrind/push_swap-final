@@ -18,6 +18,7 @@ typedef struct	s_param
 	int	i;
 	int	j;
 	int	max;
+	char	*temp;
 }		t_param;
 
 int	main(int ac, char **av);
