@@ -48,7 +48,7 @@ int	ft_errors2(char **av, t_param *param)
 {
 	int			i;
 	int			i2;
-	long int	check;
+	long int			check;
 
 	i = 1;
 	i2 = 0;

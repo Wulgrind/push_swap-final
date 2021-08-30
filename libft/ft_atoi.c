@@ -16,7 +16,7 @@
 int	ft_atoi(char *str)
 {
 	int			negatif;
-	long int	resultat;
+	long int			resultat;
 	int			i;
 
 	i = 0;

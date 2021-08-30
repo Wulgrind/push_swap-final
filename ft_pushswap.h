@@ -7,6 +7,7 @@ typedef struct	s_param
 {
 	int*	a;
 	int*	b;
+	int*	c;
 	int	stopa;
 	int	stopb;
 	int	small;
@@ -31,5 +32,7 @@ void	ft_small(int ac, t_param *param);
 void	ft_sort4(t_param *param);
 void	ft_sort3(t_param *param);
 void	ft_sort5(t_param *param);
+int	ft_init(int ac, t_param *param);
+void	ft_big(t_param *param);
 
 #endif

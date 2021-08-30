@@ -2,18 +2,10 @@
 
 int	main(int ac, char **av)
 {
-	int	i;
 	t_param param;
 
-	i = 0;
-	while (i < ac)
-	{
-		i++;
-	}
-	param.stopa = 0;
-	param.stopb = 0;
-	param.a = malloc(sizeof(int *) * i);
-	param.b = malloc(sizeof(int *) * i);
+	if (!ft_init(ac, &param))
+		exit(1);
 	if (!ft_errors(av, &param, ac))
 	{
 		ft_putstr("Error\n");
@@ -22,7 +14,7 @@ int	main(int ac, char **av)
 	ft_pick(ac, &param);
 
 	int	j = 0;
-	while (param.a[j])
+	while (j < param.stopa)
 	{
 		ft_putnbr(param.a[j]);
 		ft_putstr("\n");

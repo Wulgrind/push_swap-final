@@ -18,7 +18,9 @@ int	ft_pick(int ac, t_param *param)
 {
 	if (ft_inorder(param))
 		return (1);
-	if (ac <= 6)
-		ft_small(ac, param);
+	//if (ac <= 6)
+	//	ft_small(ac, param);
+	//else
+		ft_big(param);
 	return (1);
 }
