@@ -12,10 +12,16 @@ typedef struct	s_param
 	int	stopb;
 	int	small;
 	int	smallpos;
+	int	maxnum;
+	int	maxbits;
+	int	nb;
+	int	i;
+	int	j;
+	int	max;
 }		t_param;
 
 int	main(int ac, char **av);
-int	ft_errors(char **av, t_param *param, int ac);
+int	ft_errors(char **av, t_param *param);
 void	ft_sa(t_param *param, int sw);
 void	ft_sb(t_param *param, int sw);
 void	ft_ss(t_param *param);
@@ -34,5 +40,6 @@ void	ft_sort3(t_param *param);
 void	ft_sort5(t_param *param);
 int	ft_init(int ac, t_param *param);
 void	ft_big(t_param *param);
+void	ft_compare(t_param *param);
 
 #endif

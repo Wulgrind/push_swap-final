@@ -6,7 +6,7 @@ int	main(int ac, char **av)
 
 	if (!ft_init(ac, &param))
 		exit(1);
-	if (!ft_errors(av, &param, ac))
+	if (!ft_errors(av, &param))
 	{
 		ft_putstr("Error\n");
 		exit(1);

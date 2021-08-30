@@ -50,6 +50,8 @@ FILES		= 	ft_atoi.c  			\
 				ft_strmapi.c		\
 				ft_split.c			\
 				ft_putendl_fd.c		\
+				ft_putnbr.c		\
+				ft_putstr.c		\
 
 BONUS		=	ft_lstdelone.c		\
 				ft_lstsize.c		\

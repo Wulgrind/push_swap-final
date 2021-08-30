@@ -47,40 +47,8 @@ void	ft_sort(t_param *param)
 	ft_sortb(param);
 }
 
-int	ft_convertb(int number)
-{
-	int	remainder;
-	int	binary;
-	int	place;
-	int	nb;
-
-	binary = 0;
-	place = 1;
-	nb = number;
-	while (nb > 0)
-	{
-		remainder = nb % 2;
-		binary += remainder * place;
-		place *= 10;
-		nb /= 2;
-	}
-	return (binary);
-}
-
-void	ft_convert(t_param *param)
-{
-	int	i;
-	
-	i = 0;
-	while (i < param->stopa)
-	{
-		param->a[i] = ft_convertb(param->a[i]);
-		i++;
-	}	
-}
-
 void	ft_big(t_param *param)
 {
 	ft_sort(param);
-	ft_convert(param);
+	ft_compare(param);
 }

@@ -1,6 +1,6 @@
 #include "ft_pushswap.h"
 
-int	ft_errors3(t_param *param, int ac)
+int	ft_errors3(t_param *param)
 {
 	int	j;
 	int	i;
@@ -66,7 +66,7 @@ int	ft_errors2(char **av, t_param *param)
 	return (1);
 }
 
-int	ft_errors(char **av, t_param *param, int ac)
+int	ft_errors(char **av, t_param *param)
 {
 	int	i;
 	int	j;
@@ -75,15 +75,16 @@ int	ft_errors(char **av, t_param *param, int ac)
 	j = 0;
 	while (av[i])
 	{
+		j = 0;
 		while (av[i][j])
 		{
-			if (!ft_isdigit(av[i][j]))
+			if (!ft_isdigit(av[i][j]) && av[i][j] != '-')
 				return (0);
 			j++;
 		}
 		i++;
 	}
-	if (!ft_errors2(av, param) || !ft_errors3(param, ac))
+	if (!ft_errors2(av, param) || !ft_errors3(param))
 		return (0);
 	return (1);
 }
