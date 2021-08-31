@@ -13,5 +13,7 @@ void	ft_sb(t_param *param, int sw)
 		param->b[i - 1] = temp;
 	}
 	if (sw == 0)
-		ft_putstr("sb\n");
+		ft_putstr("sb");
+	if (!ft_inorder(param) || param->stopb > 0)
+		ft_putstr("\n");
 }

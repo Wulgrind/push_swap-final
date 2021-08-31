@@ -13,5 +13,7 @@ void	ft_pa(t_param *param)
 		param->stopb--;
 		param->stopa++;
 	}
-		ft_putstr("pa\n");
+	ft_putstr("pa");
+	if (!ft_inorder(param) || param->stopb > 0)
+		ft_putstr("\n");
 }

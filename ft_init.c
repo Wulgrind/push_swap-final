@@ -9,9 +9,9 @@ int	ft_init(int ac, t_param *param)
 		i++;
 	param->stopa = 0;
 	param->stopb = 0;
-	param->a = malloc(sizeof(int *) * i);
-	param->b = malloc(sizeof(int *) * i);
-	param->c = malloc(sizeof(int *) * i);
+	param->a = malloc(sizeof(long long*) * i);
+	param->b = malloc(sizeof(long long*) * i);
+	param->c = malloc(sizeof(long long*) * i);
 	if (param->a == NULL)
 		return (0);
 	if (param->b == NULL)

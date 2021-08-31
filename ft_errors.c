@@ -7,7 +7,6 @@ int	ft_errors3(t_param *param)
 
 	i = 0;
 	j = 0;
-
 	while (i != param->stopa)
 	{
 		j = 0;
@@ -27,7 +26,7 @@ void	ft_order(t_param *param)
 	int	i;
 	int	j;
 
-	param->temp = malloc(sizeof(int *) * param->stopa);
+	param->temp = malloc(sizeof(long long *) * param->stopa);
 	i = param->stopa - 1;
 	j = 0;
 	while (i >= 0)
@@ -44,6 +43,32 @@ void	ft_order(t_param *param)
 	}
 }
 
+int	ft_check(long long check, t_param *param, char **av)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	if (check > 2147483647 || check < -2147483648)
+		return (0);
+	if (check < 0 && param->minus == 0)
+		return (0);
+	if (check > 0 && param->minus == 1)
+		return (0);
+	while (av[i])
+	{
+		j = 0;
+		while (av[i][j])
+		{
+			if (av[i][j] == '-' && !ft_isdigit(av[i][j + 1]))
+				return (0);
+			j++;
+		}
+		i++;
+	}
+	return (1);
+}
+
 int	ft_errors2(char **av, t_param *param)
 {
 	int			i;
@@ -54,9 +79,8 @@ int	ft_errors2(char **av, t_param *param)
 	i2 = 0;
 	while (av[i])
 	{
-		check = ft_atoi(av[i]);
-		ft_putnbr(check);
-		if (check > 2147483647 || check < -2147483648)
+		check = ft_atoi2(av[i], param);
+		if (!ft_check(check, param, av))
 			return (0);
 		param->a[i2] = check;
 		param->stopa++;

@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "libft.h"
+#include "ft_pushswap.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi2(char *str, t_param *param)
 {
 	int			negatif;
 	long long			resultat;
@@ -22,6 +22,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	negatif = 1;
 	resultat = 0;
+	param->minus = 0;
 	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' ||
 			str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
@@ -30,6 +31,7 @@ int	ft_atoi(char *str)
 		if (str[i++] == '-')
 		{
 			negatif = -1;
+			param->minus = 1;
 		}
 	}
 	while (str[i] >= 48 && str[i] <= 57)

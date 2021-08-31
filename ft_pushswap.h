@@ -5,9 +5,9 @@
 
 typedef struct	s_param
 {
-	int*	a;
-	int*	b;
-	int*	c;
+	long long*	a;
+	long long*	b;
+	long long*	c;
 	int	stopa;
 	int	stopb;
 	int	small;
@@ -18,7 +18,8 @@ typedef struct	s_param
 	int	i;
 	int	j;
 	int	max;
-	char	*temp;
+	long long	*temp;
+	int	minus;
 }		t_param;
 
 int	main(int ac, char **av);
@@ -42,5 +43,7 @@ void	ft_sort5(t_param *param);
 int	ft_init(int ac, t_param *param);
 void	ft_big(t_param *param);
 void	ft_compare(t_param *param);
+int	ft_atoi2(char *str, t_param *param);
+int	ft_inorder(t_param *param);
 
 #endif

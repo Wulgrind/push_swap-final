@@ -32,7 +32,8 @@ FILES	=	ft_pa.c		\
 		ft_ss.c		\
 		ft_init.c	\
 		ft_ra.c		\
-		ft_sa.c		
+		ft_sa.c		\
+		ft_atoi2.c
 		
 
 OBJS	= ${FILES:.c=.o}

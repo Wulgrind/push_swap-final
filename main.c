@@ -30,6 +30,14 @@ int	main(int ac, char **av)
 		exit(1);
 	}
 	ft_pick(ac, &param);
+
+	int	i = 0;
+	while (i < param.stopa)
+	{
+		ft_putstr("\n");
+		ft_putnbr(param.a[i]);
+		i++;
+	}
 	ft_exit(&param);
 	return (0);
 }

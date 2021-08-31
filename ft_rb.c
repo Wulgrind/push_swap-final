@@ -14,5 +14,7 @@ void	ft_rb(t_param *param, int sw)
 	}
 	param->b[i] = temp;
 	if (sw == 0)
-		ft_putstr("rb\n");
+		ft_putstr("rb");
+	if (!ft_inorder(param) || param->stopb > 0)
+		ft_putstr("\n");
 }
