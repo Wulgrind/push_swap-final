@@ -6,12 +6,53 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 11:17:33 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/07/20 14:56:24 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/06 15:40:12 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include "ft_pushswap.h"
+
+int	ft_space(char **av)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	j = 0;
+	while (av[i][j])
+	{
+		if (av[i][j] != ' ')
+			return (0);
+		j++;
+	}
+	return (1);
+}
+
+int	ft_delete(char **av)
+{
+	int	i = 1;
+	int	j = 0;
+
+	while (av[i][j])
+	{
+		while (av[i][j] == ' ' || av[i][j] == '\n' || av[i][j] == '\t' ||
+				av[i][j] == '\v' || av[i][j] == '\f' || av[i][j] == '\r')
+			j++;
+		while (av[i][j] == '-' || av[i][j] == '+')
+		{
+			av[i][j] = ' ';
+			j++;
+		}
+		while (av[i][j] >= 48 && av[i][j] <= 57)
+		{
+			av[i][j] = ' ';
+			j++;
+		}
+		break;
+	}
+	return (1);
+}
 
 int	ft_atoi2(char *str, t_param *param)
 {

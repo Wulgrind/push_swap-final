@@ -1,6 +1,6 @@
 #include "ft_pushswap.h"
 
-int	ft_errors3(t_param *param)
+int	ft_errors3b(t_param *param)
 {
 	int	j;
 	int	i;
@@ -21,7 +21,7 @@ int	ft_errors3(t_param *param)
 	return (1);
 }
 
-int	ft_order(t_param *param)
+int	ft_orderb(t_param *param)
 {
 	int	i;
 	int	j;
@@ -46,73 +46,63 @@ int	ft_order(t_param *param)
 	return (1);
 }
 
-int	ft_check(long long check, t_param *param, char **av)
-{
-	int	i;
-	int	j;
-
-	i = 1;
-	if (check > 2147483647 || check < -2147483648)
-		return (0);
-	if (check < 0 && param->minus == 0)
-		return (0);
-	if (check > 0 && param->minus == 1)
-		return (0);
-	while (av[i])
-	{
-		j = 0;
-		while (av[i][j])
-		{
-			if (av[i][j] == '-' && !ft_isdigit(av[i][j + 1]))
-				return (0);
-			j++;
-		}
-		i++;
-	}
-	return (1);
-}
-
-int	ft_errors2(char **av, t_param *param)
-{
-	int			i;
-	int			i2;
-	long long		check;
-
-	i = 1;
-	i2 = 0;
-	while (av[i])
-	{
-		check = ft_atoi2(av[i], param);
-		if (!ft_check(check, param, av))
-			return (0);
-		param->a[i2] = check;
-		param->stopa++;
-		i++;
-		i2++;
-	}
-	ft_order(param);
-	return (1);
-}
-
-int	ft_errors(char **av, t_param *param)
+int	ft_checkb(long long check, t_param *param, char **av)
 {
 	int	i;
 	int	j;
 
 	i = 1;
 	j = 0;
-	while (av[i])
+	if (check > 2147483647 || check < -2147483648)
+		return (0);
+	if (check < 0 && param->minus == 0)
+		return (0);
+	if (check > 0 && param->minus == 1)
+		return (0);
+	while (av[i][j])
 	{
-		j = 0;
-		while (av[i][j])
-		{
-			if (!ft_isdigit(av[i][j]) && av[i][j] != '-')
-				return (0);
-			j++;
-		}
-		i++;
+		if (av[i][j] == '-' && !ft_isdigit(av[i][j + 1]))
+			return (0);
+		j++;
 	}
-	if (!ft_errors2(av, param) || !ft_errors3(param))
+	return (1);
+}
+
+int	ft_errors2b(char **av, t_param *param)
+{
+	int			i2;
+	long long	check;
+
+	i2 = 0;
+	while (!ft_space(av))
+	{
+		check = ft_atoi2(av[1], param);
+		ft_delete(av);
+		if (!ft_checkb(check, param, av))
+			return (0);
+		param->a[i2] = check;
+		param->stopa++;
+		i2++;
+	}
+	ft_orderb(param);
+	return (1);
+}
+
+int	ft_errorsb(char **av, t_param *param)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	j = 0;
+	while (av[i][j])
+	{
+		if (!ft_isdigit(av[i][j]) && av[i][j] != '-' && av[i][j] != ' ')
+			return (0);
+		j++;
+	}
+	if (!ft_errors2b(av, param) || !ft_errors3b(param))
 		return (0);
 	return (1);
 }
+

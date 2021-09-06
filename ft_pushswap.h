@@ -35,15 +35,19 @@ void	ft_rr(t_param *param);
 void	ft_rra(t_param *param, int sw);
 void	ft_rrb(t_param *param, int sw);
 void	ft_rrr(t_param *param);
-int	ft_pick(int ac, t_param *param);
-void	ft_small(int ac, t_param *param);
+int	ft_pick(t_param *param);
+int	ft_small(t_param *param);
 void	ft_sort4(t_param *param);
 void	ft_sort3(t_param *param);
 void	ft_sort5(t_param *param);
-int	ft_init(int ac, t_param *param);
+int	ft_init(int ac, t_param *param, char **av);
 void	ft_big(t_param *param);
 void	ft_compare(t_param *param);
 int	ft_atoi2(char *str, t_param *param);
 int	ft_inorder(t_param *param);
+int	ft_errorsb(char **av, t_param *param);
+int	ft_delete(char **av);
+int	ft_space(char **av);
+int	ft_checktype(char **av);
 
 #endif
