@@ -14,6 +14,5 @@ void	ft_sa(t_param *param, int sw)
 	}
 	if (sw == 0)
 		ft_putstr("sa");
-	if (!ft_inorder(param) || param->stopb > 0)
-		ft_putstr("\n");
+	ft_putstr("\n");
 }

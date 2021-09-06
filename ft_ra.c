@@ -15,8 +15,5 @@ void	ft_ra(t_param *param, int sw)
 	param->a[i] = temp;
 	if (sw == 0)
 		ft_putstr("ra");
-	if (!ft_inorder(param) || param->stopb > 0)
-	{
-		ft_putstr("\n");
-	}
+	ft_putstr("\n");
 }

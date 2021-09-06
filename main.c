@@ -55,12 +55,5 @@ int	main(int ac, char **av)
 		exit(1);
 	}
 	ft_pick(&param);
-	
-	int i = 0;
-	while (i < param.stopa)
-	{
-		ft_putnbr(param.a[i]);
-		i++;
-	}
 	return (0);
 }
