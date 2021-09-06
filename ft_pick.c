@@ -5,7 +5,7 @@ int	ft_inorder(t_param *param)
 	int	i;
 
 	i = 0;
-	while (i < param->stopa - 1)
+	while (i < param->stopa -1)
 	{
 		if (param->a[i + 1] > param->a[i])
 		{
