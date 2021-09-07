@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort5.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/07 10:22:50 by qbrillai          #+#    #+#             */
+/*   Updated: 2021/09/07 10:23:30 by qbrillai         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_pushswap.h"
 
 void	ft_sort5d(t_param *param)
@@ -68,13 +80,13 @@ void	ft_sort5b(t_param *param)
 		ft_sa(param, 0);
 		ft_pb(param);
 	}
-	ft_sort5c(param);	
+	ft_sort5c(param);
 }
 
 void	ft_sort5(t_param *param)
 {
 	int	i;
-		
+
 	i = 0;
 	param->small = param->a[i];
 	param->smallpos = i;

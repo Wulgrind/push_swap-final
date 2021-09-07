@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_compare.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/07 10:07:18 by qbrillai          #+#    #+#             */
+/*   Updated: 2021/09/07 10:07:20 by qbrillai         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_pushswap.h"
 
 void	ft_empty(t_param *param)
@@ -11,7 +23,7 @@ void	ft_empty(t_param *param)
 void	ft_compare2(t_param *param)
 {
 	param->nb = param->a[param->stopa - 1];
-	if (((param->nb >> param->i)&1) == 1)
+	if (((param->nb >> param->i) & 1) == 1)
 		ft_ra(param, 0);
 	else
 		ft_pb(param);

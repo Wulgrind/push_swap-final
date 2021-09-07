@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_pick.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/07 10:21:43 by qbrillai          #+#    #+#             */
+/*   Updated: 2021/09/07 10:22:05 by qbrillai         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_pushswap.h"
 
 int	ft_inorder(t_param *param)
@@ -5,7 +17,7 @@ int	ft_inorder(t_param *param)
 	int	i;
 
 	i = 0;
-	while (i < param->stopa -1)
+	while (i < param->stopa - 1)
 	{
 		if (param->a[i + 1] > param->a[i])
 		{

@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 11:17:33 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/06 15:40:12 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 10:20:41 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,11 @@ int	ft_space(char **av)
 
 int	ft_delete(char **av)
 {
-	int	i = 1;
-	int	j = 0;
+	int	i;
+	int	j;
 
+	i = 1;
+	j = 0;
 	while (av[i][j])
 	{
 		while (av[i][j] == ' ' || av[i][j] == '\n' || av[i][j] == '\t' ||
@@ -49,7 +51,7 @@ int	ft_delete(char **av)
 			av[i][j] = ' ';
 			j++;
 		}
-		break;
+		 break ;
 	}
 	return (1);
 }
@@ -57,15 +59,15 @@ int	ft_delete(char **av)
 int	ft_atoi2(char *str, t_param *param)
 {
 	int			negatif;
-	long long			resultat;
+	long long	resultat;
 	int			i;
 
 	i = 0;
 	negatif = 1;
 	resultat = 0;
 	param->minus = 0;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' ||
-			str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\t'
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_errors.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/07 10:11:53 by qbrillai          #+#    #+#             */
+/*   Updated: 2021/09/07 10:11:54 by qbrillai         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_pushswap.h"
 
 int	ft_errors3(t_param *param)
@@ -76,7 +88,7 @@ int	ft_errors2(char **av, t_param *param)
 {
 	int			i;
 	int			i2;
-	long long		check;
+	long long	check;
 
 	i = 1;
 	i2 = 0;
