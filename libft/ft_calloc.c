@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 12:52:25 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/01/25 11:00:21 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:06:10 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	i = 0;
 	total = count * size;
-	if (!(str = malloc(total)))
+	str = malloc(total);
+	if (str == NULL)
 		return (NULL);
 	while (total--)
 	{

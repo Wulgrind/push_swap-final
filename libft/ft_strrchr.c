@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/18 14:56:31 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/01/21 16:25:17 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:09:33 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	len(const char *s)
 	return (i);
 }
 
-char		*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	size_t	slen;
 

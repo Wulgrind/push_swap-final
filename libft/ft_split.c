@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/22 20:26:53 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/01/23 10:39:19 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:09:59 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	numstring(char const *s1, char c)
 
 static int	numchar(char const *s2, char c, int i)
 {
-	int lenght;
+	int	lenght;
 
 	lenght = 0;
 	while (s2[i] != c && s2[i] != '\0')
@@ -84,7 +84,7 @@ static char	**affect(char const *s, char **ret, char c, int wc)
 	return (ret);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char		**ret;
 	char		wc;

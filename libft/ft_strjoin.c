@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 14:51:12 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/01/21 16:27:28 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:17:23 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static int		mlen(const char *str)
+static int	mlen(const char *str)
 {
 	int	i;
 
@@ -24,7 +24,7 @@ static int		mlen(const char *str)
 	return (i);
 }
 
-char			*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		len1;
@@ -36,7 +36,8 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	len2 = mlen(s2);
 	i = 0;
 	j = 0;
-	if (!(str = malloc(sizeof(char) * (len1 + len2 + 1))))
+	str = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (str == NULL)
 		return (NULL);
 	while (s1[i] != '\0')
 	{

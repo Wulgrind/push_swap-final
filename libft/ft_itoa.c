@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 10:12:22 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/01/25 12:34:23 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:20:35 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static int		lenght(long nb)
+static int	lenght(long nb)
 {
 	int	len;
 
@@ -32,7 +32,13 @@ static int		lenght(long nb)
 	return (len);
 }
 
-char			*ft_itoa(int n)
+void	writer(long *nb, int *i, char **str)
+{
+	*str[(*i)--] = 48 + ((*nb) % 10);
+	(*nb) = (*nb) / 10;
+}
+
+char	*ft_itoa(int n)
 {
 	char	*str;
 	long	nb;
@@ -40,7 +46,8 @@ char			*ft_itoa(int n)
 
 	nb = n;
 	i = lenght(nb);
-	if (!(str = (char *)malloc(sizeof(char) * (i + 1))))
+	str = (char *)malloc(sizeof(char) * (i + 1));
+	if (str == NULL)
 		return (NULL);
 	str[i--] = '\0';
 	if (nb == 0)
@@ -55,8 +62,7 @@ char			*ft_itoa(int n)
 	}
 	while (nb > 0)
 	{
-		str[i--] = 48 + (nb % 10);
-		nb = nb / 10;
+		writer (&nb, &i, &str);
 	}
 	return (str);
 }

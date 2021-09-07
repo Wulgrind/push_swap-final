@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 11:04:42 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/01/21 12:01:14 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:09:15 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*s1;
 	size_t			i;
 
-	s1 = (unsigned char*)s;
+	s1 = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{

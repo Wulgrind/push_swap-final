@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/19 13:08:38 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/01/21 14:55:18 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:05:34 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ char	*ft_strdup(const char *s1)
 	j = 0;
 	while (s1[i])
 		i++;
-	if (!(str = malloc(sizeof(*str) * (i + 1))))
+	str = malloc(sizeof(*str) * (i + 1));
+	if (str == NULL)
 		return (NULL);
 	while (s1[j])
 	{

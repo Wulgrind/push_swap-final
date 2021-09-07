@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 02:30:37 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/02/02 02:31:15 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:18:46 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	unsigned	int	i;
-	unsigned	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	i = 0;
 	if (*to_find == '\0')

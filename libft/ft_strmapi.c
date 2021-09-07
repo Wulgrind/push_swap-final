@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/20 13:33:22 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/01/25 11:25:50 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:08:23 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static size_t	len(char const *s)
 	return (i);
 }
 
-char			*ft_strmapi(char const *s, char (*f) (unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
 	char	*str;
 	size_t	i;
@@ -32,7 +32,8 @@ char			*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 	str = NULL;
 	if (s && f)
 	{
-		if (!(str = malloc(sizeof(char) * len((char *)s) + 1)))
+		str = malloc(sizeof(char) * len((char *)s) + 1);
+		if (str == NULL)
 			return (NULL);
 		while (i < len((char *)s))
 		{
