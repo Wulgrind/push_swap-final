@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 10:21:43 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/07 10:22:05 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/07 14:43:08 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	ft_pick(t_param *param)
 {
 	if (ft_inorder(param))
 		return (1);
-	else if (param->stopa <= 6)
+	else if (param->stopa <= 5)
 		ft_small(param);
-	else if (param->stopa > 6)
+	else if (param->stopa >= 6)
 		ft_big(param);
 	return (1);
 }
