@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 10:23:49 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/07 10:24:11 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/14 11:52:28 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,9 @@ void	ft_sort(t_param *param)
 void	ft_big(t_param *param)
 {
 	ft_sort(param);
+	param->i = 0;
+	param->big = param->stopa - 1;
+	param->bigbit = 0;
+	param->max = param->stopa;
 	ft_compare(param);
 }

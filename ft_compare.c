@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 10:07:18 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/07 10:07:20 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/14 11:52:34 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,9 @@ void	ft_compare2(t_param *param)
 
 void	ft_compare(t_param *param)
 {
-	param->i = 0;
-	param->maxnum = param->stopa - 1;
-	param->maxbits = 0;
-	param->max = param->stopa;
-	while ((param->maxnum >> param->maxbits) != 0)
-		param->maxbits++;
-	while (param->i < param->maxbits)
+	while ((param->big >> param->bigbit) != 0)
+		param->bigbit++;
+	while (param->i < param->bigbit)
 	{
 		param->j = 0;
 		while (param->j < param->max)

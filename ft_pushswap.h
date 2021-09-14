@@ -6,7 +6,7 @@
 /*   By: qbrillai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 10:26:22 by qbrillai          #+#    #+#             */
-/*   Updated: 2021/09/07 10:28:36 by qbrillai         ###   ########.fr       */
+/*   Updated: 2021/09/14 11:51:33 by qbrillai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ typedef struct s_param
 	int			stopb;
 	int			small;
 	int			smallpos;
-	int			maxnum;
-	int			maxbits;
+	int			big;
+	int			bigbit;
 	int			nb;
 	int			i;
 	int			j;
